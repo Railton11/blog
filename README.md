@@ -17,7 +17,7 @@ Necessário ter o Visual Studio Code instalado, ou Pycharm ou qualquer editor de
 
 ### 🔧 Instalação
 
-Supondo que já tenha o ambiente de desenvolvimento preparado, instale as requisitos.
+Supondo que já tenha o ambiente de desenvolvimento preparado, instale os requisitos.
 
 Instale as dependências:
 
