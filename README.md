@@ -6,7 +6,6 @@ Esse projeto foi criado para o aprendizado do framework Django.
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
 
 ### 📋 Pré-requisitos
 
@@ -18,9 +17,9 @@ Necessário ter o Visual Studio Code instalado, ou Pycharm ou qualquer editor de
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
+Supondo que já tenha o ambiente de desenvolvimento preparado, instale as requisitos.
 
-Supondo que já tenha o ambiente de desenvolvimento preparado, instale as dependências com o seguinte comando:
+Instale as dependências:
 
 ```
 pip install -r requirements.txt
