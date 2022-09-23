@@ -73,6 +73,6 @@ python manage.py test
 
 ## 🛠️ Construído com
 
-Todas as ferramentas que forma usadas para o desenvolvimento desse projeto.
+Todas as ferramentas que foram usados para o desenvolvimento desse projeto.
 
 * [Django](https://www.djangoproject.com/) - O framework web usado
