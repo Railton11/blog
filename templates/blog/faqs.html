@@ -1,0 +1,51 @@
+{% extends "layout/base.html" %}
+{% block title %}Perguntas Frequentes{% endblock %}
+{% block content %}
+    <section>
+        <h3 class="text-center mb-4 pb-2 text-primary fw-bold">Perguntas Frequentes</h3>
+        <p class="text-center mb-5">
+            Encontre as respostas para as perguntas mais frequentes abaixo
+        </p>
+    
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="far fa-paper-plane text-primary pe-2"></i>Como entrar no site?</h6>
+                <p>
+                    Para entrar no site e ter direito as funcionalidades, faça o cadastro <a href="{% url 'register' %}">aqui</a>. E ative sua conta no seu e-mail.
+                </p>
+            </div>
+    
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-pen-alt text-primary pe-2"></i>Como faço o cadastro?</h6>
+                <p>
+                <strong><u>No canto superior direito há um botão com o nome cadastro,</u></strong> clique nesse botão e apos isso você sera redirecionado para a página de cadastro, preencha os campos que a página que pede com suas informações.</p>
+            </div>
+    
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-user text-primary pe-2"></i>Como alterar minhas informações?</h6>
+                <p>
+                    <strong><u>No menu superior há um botão com o nome perfil,</u></strong> clique nele e apos isso você sera redirecionado para uma página que tera as suas informações, clique nos campos que deseja atualizar suas informações, apos isso clique no botão salvar perfil e seus dados estará atualizado.
+                </p>
+            </div>
+    
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-rocket text-primary pe-2"></i>Como alterar minha senha?</h6>
+                <p>
+                    <strong><u>No menu superior há um botão com o nome Perfil,</u></strong> clique nele e apos isso você sera redirecionado para uma página que terá seus dados, em baixo de suas informações ha um botão com o nome alterar senha, clicando nela você será redirecionado para uma página que terá campos, clique nos campos e informe a nova senha, apos isso clique no botão salvar e sua senha estará atualizado.
+                </p>
+            </div>
+    
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-home text-primary pe-2">Por que não consigo comentar?</i></h6>
+                <p> Você não pode comentar se não estiver longado na plataforma, realize o login para poder comentar nas notícias. Caso não tenha uma conta, realize o cadastro <a href="{% url 'register' %}">aqui</a> e apos isso faça o login e então poderá fazer comentários nas postagens.</p>
+            </div>
+    
+            <div class="col-md-6 col-lg-4 mb-4">
+                <h6 class="mb-3 text-primary"><i class="fas fa-book-open text-primary pe-2"></i>Por que meu comentário não aparece?</h6>
+                <p>
+                    Seu comentário estará passando por análise, apos isso o administrador ira aprova seu comentário se cumprir com as regras, ou ira desaprovar se descumprir com a mesma.
+                </p>
+            </div>
+        </div>
+    </section>
+{% endblock %}

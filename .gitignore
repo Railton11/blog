@@ -1,0 +1,7 @@
+Guia Backend.txt
+venv/
+.env
+migrations/
+__pycache__/
+db.sqlite3
+media/

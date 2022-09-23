@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <title>Cadastro</title>
+    </head>
+    <body>
+        <section class="">
+            <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+                <div class="container">
+                    {% for message in messages %}
+                        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                            {{message}}
+                            <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                                <span arial-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    <div class="row gx-lg-5 align-items-center">
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h1 class="my-5 display-3 fw-bold ls-tight">
+                                As melhores <br />
+                                <span class="text-primary">informações do sertão paraibano</span>
+                            </h1>
+                            <p style="color: hsl(217, 10%, 50.8%)">
+                                Cadastre-se para ter as melhores e mais completas notícias do sertão paraibano.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <div class="card">
+                                <div class="card-body py-5 px-md-5">
+                                    <form method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-6 mb-4">
+                                                <div class="form-outline">
+                                                    <input type="text" id="name" name="name" class="form-control" Required/>
+                                                    <label class="form-label" for="name">Nome</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="email" id="email" name="email" class="form-control" Required/>
+                                            <label class="form-label" for="email">Email</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="file" id="image" name="image" class="form-control" Required/>
+                                            <label class="form-label" for="image">Imagem</label>
+                                            
+                                            <input type="date" id="data" name="data" class="form-control" Required/>
+                                            <label class="form-label" for="birth_date">Data de nascimento</label>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="pass1" name="pass1" class="form-control" Required/>
+                                            <label class="form-label" for="pass1">Senha</label>
+
+                                            <input type="password" id="pass2" name="pass2" class="form-control" Required/>
+                                            <label class="form-label" for="pass2">Confirme a senha</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block mb-4">
+                                            Enviar
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    </body>
+</html>

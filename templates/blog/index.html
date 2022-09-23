@@ -1,0 +1,49 @@
+{% extends "layout/base.html" %}
+{% load thumbnail %}
+{% block title %}Bem vindo{% endblock %}
+{% block content %}
+    {% if context %} 
+        <div class="row">
+            {% for post in context %}
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <a href="{% url 'detail' post.slug %}"><img src="{{post.image|thumbnail_url:'avatar'}}" class="card-img-top" alt="capa_da_imagem"></a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{post.title}}</h5>
+                            <p class="card-text">{{post.description}}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Criado por {{post.author}},</small>
+                            <small class="text-muted">Ultima atualização {{post.update}}</small>
+                        </div>
+                    </div>
+                </div>    
+            {% endfor %}
+        </div>
+    {% else %}
+        {% if user.is_staff %}
+            <p>
+                No momento não temos nenhuma postagem.<br>
+                Crie uma postagem agora mesmo, <a href="{% url 'admin:blog_news_changelist' %}">aqui</a>
+            </p>
+        {% else %}
+            <p>
+                No momento não temos nenhuma postagem. Volte mais tarde!
+            </p>
+        {% endif %}
+    {% endif %}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disable">
+                {% if page_obj.has_previous %}
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="1">Anterior</a>
+                {% endif %}
+            </li>
+            <li class="page-item">
+                {% if page_obj.has_next %}
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Próximo</a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
