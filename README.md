@@ -2,20 +2,16 @@
 
 Esse projeto foi criado para o aprendizado do framework Django.
 
-## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
 
-### 📋 Pré-requisitos
-
-De que coisas você precisa para instalar o software e como instalá-lo?
+Pré-requisitos para rodar o projeto.
 
 ```
 Necessário ter o Visual Studio Code instalado, ou Pycharm ou qualquer editor de código fonte
 ```
 
-### 🔧 Instalação
 
 Supondo que já tenha o ambiente de desenvolvimento preparado, instale os requisitos.
 
@@ -63,7 +59,6 @@ Abra o browser e acesse:
 localhost:8000
 ```
 
-## ⚙️ Executando os testes
 
 Para executar os testes automatizados, abra o terminal e digite:
 
@@ -71,7 +66,6 @@ Para executar os testes automatizados, abra o terminal e digite:
 python manage.py test
 ```
 
-## 🛠️ Construído com
 
 Todas as ferramentas que foram usados para o desenvolvimento desse projeto.
 
